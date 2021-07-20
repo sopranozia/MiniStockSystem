@@ -1,0 +1,72 @@
+﻿@model List<StockManagementSystem.Models.Product>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script>
+
+        $(Document).ready(function () {
+
+            $("button").click(function () {
+
+                $("#stock").toggle();
+
+            });
+
+        });
+
+</script>
+
+<div class="jumbotron">
+    <h1>Welcome to My Stock  Management System!</h1>
+
+
+</div>
+
+<a href="/products/create" class="btn btn-primary">Create</a>
+<form class="form-inline pull-right" action="/products/index">
+    <label for="search">Search:</label>
+    <input type="search" id="search" class="form-control" name="search" value="@ViewBag.search" placeholder="search item" />
+    <button type="submit" id="toggle" class="btn btn-primary" >Search</button>
+</form>
+
+<div id="">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Photo</th>
+                <th>ProductID</th>
+                <th>Item Name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>InvoiceID</th>
+                <th>Category</th>
+                <th>Action</th>
+
+            </tr>
+        </thead>
+        <tbody >
+            @foreach (var item in Model)
+            {
+                <tr >
+                    <td>@Html.DisplayFor(Temp => item.Photo)</td>
+                    <td>@Html.DisplayFor(Temp => item.ProductID)</td>
+                    <td>@Html.DisplayFor(Temp => item.ItemName)</td>
+                    <td>@Html.DisplayFor(Temp => item.Quantity)</td>
+                    <td>@Html.DisplayFor(Temp => item.Price)</td>
+                    <td>@Html.DisplayFor(Temp => item.InvoiceID)</td>
+                    <td>@Html.DisplayFor(Temp => item.OrderID)</td>
+                    <td><a href="/products/report/@item.ProductID" class="btn btn-secondary">Report</a>|<a href="/products/edit/@item.ProductID" class="btn btn-primary">Edit</a>|<a href="/products/delete/@item.ProductID" class="btn btn-danger">Delete</a>|</td>
+
+                </tr>
+            }
+
+        </tbody>
+
+
+
+    </table>
+
+</div>

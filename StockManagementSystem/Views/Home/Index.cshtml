@@ -1,0 +1,41 @@
+﻿@Model List<StockManagementSystem.Models.Product>
+
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Welcome to My Stock  Management System!</h1>
+
+
+</div>
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <td>ProductID</td>
+            <td>Item Name</td>
+            <td>Quantity</td>
+            <td>Price</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@item.ProductsID</td>
+            <td>@item.ItemName</td>
+            <td>@item.Quantity</td>
+            <td>@item.Price</td>
+        </tr>
+        }
+
+    </tbody>
+
+
+
+</table>
+

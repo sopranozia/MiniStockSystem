@@ -1,0 +1,25 @@
+﻿@model StockManagementSystem.Models.Product
+
+@{
+    ViewBag.Title = "Report";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Report</h2>
+
+
+<div class="card " style="width: 300px;">
+    <p>@Model.Photo</p>
+    <div class="card-body">
+        <h5 class="card-title">Stock</h5>
+        <p class="card-text">ProductID:@Model.ProductID </p>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">Product Name: @Model.ItemName</li>
+        <li class="list-group-item">Quantity:@Model.Quantity </li>
+        <li class="list-group-item">Price:@Model.Price </li>
+        <li class="list-group-item">InvoiceID:@Model.InvoiceID </li>
+        <li class="list-group-item">OrderID:@Model.OrderID</li>
+    </ul>
+    <a href="/products/index" >Back</a>|<a href="/products/email">send-email</a>
+</div>

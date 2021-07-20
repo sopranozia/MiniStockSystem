@@ -1,0 +1,17 @@
+﻿#stock{
+
+    display:block;
+}
+
+.card {
+    margin: 0 auto; 
+    float: none; 
+    margin-bottom: 10px; 
+}
+
+#pic{
+
+    width:80px;
+    height:80px;
+
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="07895340f7c04b2d8ea9954747d77481" Name="Diagram1">
+        <EntityTypeShape EntityType="StockDatabaseModel.Invoice" Width="1.5" PointX="5.25" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="StockDatabaseModel.Order" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="StockDatabaseModel.Product" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="StockDatabaseModel.FK_Invoices_Orders" ManuallyRouted="false" />
+        <AssociationConnector Association="StockDatabaseModel.FK_Orders_Products" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="StockDatabaseModel.Email" Width="1.5" PointX="7.5" PointY="1.5" />
+        <AssociationConnector Association="StockDatabaseModel.FK_Emails_Emails" />
+        <EntityTypeShape EntityType="StockDatabaseModel.sysdiagram" Width="1.5" PointX="0.75" PointY="4.75" />
+        <AssociationConnector Association="StockDatabaseModel.FK_Products_Products" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
